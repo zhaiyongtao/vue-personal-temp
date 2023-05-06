@@ -1,0 +1,10 @@
+@import "./base.scss";
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100vh !important;
+  font-size: 14px;
+  color: var(--color-text)
+}
+

@@ -1,0 +1,73 @@
+{
+  "name": "vue-mobile-temp",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite --mode dev",
+    "dev:test": "vite --mode test",
+    "build": "run-p type-check build-only",
+    "build:test": "run-p type-check build-only-test",
+    "build:prod": "run-p type-check build-only-prod",
+    "preview": "vite preview --port 4173",
+    "build-only": "vite build --mode prod",
+    "build-only-test": "vite build --mode test",
+    "build-only-prod": "vite build --mode prod",
+    "type-check": "vue-tsc --noEmit",
+    "lint": "eslint src --fix --ext .js,.ts,.jsx,.tsx,.vue && prettier --write --ignore-unknown",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "axios": "^1.2.0",
+    "classnames": "^2.3.2",
+    "eslint-plugin-n": "^15.5.1",
+    "pinia": "^2.0.21",
+    "postcss-px2rem": "^0.3.0",
+    "qs": "^6.11.0",
+    "vue": "^3.2.38",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.56",
+    "@types/qs": "^6.9.7",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "@vicons/material": "^0.12.0",
+    "@vicons/utils": "^0.1.4",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "@vue/tsconfig": "^0.1.3",
+    "amfe-flexible": "^2.2.1",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.8.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "npm-run-all": "^4.1.5",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^2.8.0",
+    "reset.css": "^2.0.2",
+    "rollup-plugin-visualizer": "^5.9.0",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "typescript": "~4.7.4",
+    "vite": "^3.0.9",
+    "vite-plugin-cdn-import": "^0.3.5",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vue-tsc": "^0.40.7"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "resolutions": {
+    "bin-wrapper": "npm:bin-wrapper-china"
+  }
+}

@@ -1,0 +1,27 @@
+//flex居中mixin
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// flex 垂直剧中mixin
+@mixin flexColumnCenter() {
+  @include flexCenter;
+  flex-direction: column;
+}
+
+// flex 水平剧中mixin
+@mixin flexRowCenter() {
+  @include flexCenter;
+  flex-direction: row;
+}
+
+// 隐藏滚动条-chorme safari -火狐 ie
+@mixin hideScrollBar() {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
